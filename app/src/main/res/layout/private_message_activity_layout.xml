@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+
+    <!--头部-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/private_message_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="30dp"
+            android:src="@mipmap/left" />
+
+        <TextView
+            android:id="@+id/private_message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="5dp"
+            android:text="@string/private_message"
+            android:textSize="18dp" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cut_off_big" />
+    <!--头像-->
+    <RelativeLayout
+        android:id="@+id/private_message_re_head_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <com.etouchsky.o2o.XCRoundImageView
+            android:id="@+id/private_message_iv_head_portrait"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:src="@mipmap/my_info_head_portrait" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/right" />
+
+        <TextView
+            android:id="@+id/private_message_re_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/private_message_iv_head_portrait"
+            android:paddingLeft="5dp"
+            android:text="@string/private_message_name"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/cut_off" />
+
+    <!--昵称-->
+    <RelativeLayout
+        android:id="@+id/private_message_re_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/private_name"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/right" />
+
+        <TextView
+            android:id="@+id/private_message_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/r1"
+            android:layout_toStartOf="@+id/r1"
+            android:paddingRight="5dp"
+            android:text="@string/private_message_name"
+            android:textColor="#999999" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/cut_off" />
+    <!--性别-->
+    <RelativeLayout
+        android:id="@+id/private_message_re_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/private_sex"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/right" />
+
+        <TextView
+            android:id="@+id/private_message_tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/r2"
+            android:paddingRight="5dp"
+            android:text="@string/private_message_sex"
+            android:textColor="#999999" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/cut_off" />
+    <!--出生日期-->
+    <RelativeLayout
+        android:id="@+id/private_message_re_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/private_data"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/right" />
+
+        <TextView
+            android:id="@+id/private_message_tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/r3"
+            android:paddingRight="5dp"
+            android:text="@string/private_massage_data"
+            android:textColor="#999999" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/cut_off" />
+    <!--收货地址-->
+    <RelativeLayout
+        android:id="@+id/private_message_re_adress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/private_adress"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/right" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cut_off_big" />
+    <!--实名认证-->
+    <RelativeLayout
+        android:id="@+id/private_message_re_attestation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/private_attestation"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/right" />
+
+        <TextView
+            android:id="@+id/private_message_tv_attestation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/r4"
+            android:paddingRight="5dp"
+            android:text="@string/private_message_attestation"
+            android:textColor="#999999" />
+
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/cut_off" />
+    <!--账户安全-->
+    <RelativeLayout
+        android:id="@+id/private_message_re_safety"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/private_safety"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/right" />
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7">
+
+        <TextView
+            android:id="@+id/private_message_tv_quit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#DB3E3E"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/private_message_quit"
+            android:textColor="#FFFFFF"
+            android:textSize="15dp" />
+    </FrameLayout>
+</LinearLayout>

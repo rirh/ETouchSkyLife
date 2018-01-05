@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!--第一部分布局1-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--用户信息布局-->
+        <RelativeLayout
+            android:id="@+id/my_info_re_private_message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:background="@mipmap/my_info_bac_top">
+
+
+            <ImageView
+                android:id="@+id/my_info_iv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:src="@mipmap/my_info_set" />
+
+            <com.etouchsky.o2o.XCRoundImageView
+                android:id="@+id/my_info_iv_head_portrait"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/my_info_iv_setting"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/my_info_head_portrait" />
+
+            <TextView
+                android:id="@+id/my_info_re_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_info_iv_head_portrait"
+                android:layout_centerHorizontal="true"
+                android:text="@string/recruitment" />
+
+            <TextView
+                android:id="@+id/my_info_re_medalha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/my_info_re_user_name"
+                android:layout_centerHorizontal="true"
+                android:text="@string/wait_take"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <!--订单布局-->
+        <RelativeLayout
+            android:id="@+id/my_info_re_from"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/re_my_info_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:src="@mipmap/my_info_form" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/re_my_info_form"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@id/re_my_info_form"
+                android:paddingLeft="5dp"
+                android:text="@string/my_form" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_toLeftOf="@+id/re_my_info_all_from"
+                android:layout_toStartOf="@+id/re_my_info_all_from"
+                android:paddingRight="5dp"
+                android:text="@string/my_form"
+                android:textColor="#999999" />
+
+            <ImageView
+                android:id="@+id/re_my_info_all_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="10dp"
+                android:src="@mipmap/right" />
+
+
+        </RelativeLayout>
+
+        <!--分割线-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/cut_off" />
+
+        <!--��XXXX����-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/my_info_ll_wait_pay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/my_info_wait_pay" />
+
+                    <TextView
+                        android:id="@+id/o2o_my_form_wait_pay_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv1"
+                        android:layout_alignLeft="@id/iv1"
+                        android:layout_margin="12dp"
+                        android:background="@mipmap/o2o_user_address_default_red"
+                        android:gravity="center"
+                        android:text="15"
+                        android:textColor="@color/white"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv1"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="5dp"
+                        android:text="@string/wait_pay"
+                        android:textColor="#000000" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_info_ll_wait_groupon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/my_info_wait_groupon" />
+
+                    <TextView
+                        android:id="@+id/o2o_my_form_wait_groupon_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv2"
+                        android:layout_alignLeft="@id/iv2"
+                        android:layout_margin="12dp"
+                        android:background="@mipmap/o2o_user_address_default_red"
+                        android:gravity="center"
+                        android:text="15"
+                        android:textColor="@color/white"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv2"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="5dp"
+                        android:text="@string/wait_groupon"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_info_ll_wait_take"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                android:textColor="#000000" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/my_info_wait_take" />
+
+
+                    <TextView
+                        android:id="@+id/o2o_my_form_wait_take_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv3"
+                        android:layout_alignLeft="@id/iv3"
+                        android:layout_margin="12dp"
+                        android:background="@mipmap/o2o_user_address_default_red"
+                        android:text="15"
+                        android:textColor="@color/white"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv3"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="5dp"
+                        android:text="@string/wait_take"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_info_ll_wait_appraise"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/my_info_wait_appraise" />
+
+                    <TextView
+                        android:id="@+id/o2o_my_form_wait_appraise_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv4"
+                        android:layout_alignLeft="@id/iv4"
+                        android:layout_margin="12dp"
+                        android:background="@mipmap/o2o_user_address_default_red"
+                        android:text="15"
+                        android:textColor="@color/white"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv4"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="5dp"
+                        android:text="@string/wait_appraise"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_info_ll_exchange_good"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                android:textColor="#000000" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/my_info_exchange_good" />
+
+                    <TextView
+                        android:id="@+id/o2o_my_form_exchange_goods_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/iv5"
+                        android:layout_alignLeft="@id/iv5"
+                        android:layout_margin="12dp"
+                        android:background="@mipmap/o2o_user_address_default_red"
+                        android:text="15"
+                        android:textColor="@color/white"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv5"
+                        android:layout_centerInParent="true"
+                        android:paddingTop="5dp"
+                        android:text="@string/exchange_good"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cut_off_big" />
+
+    <!--第二部分布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--我的钱包-->
+        <LinearLayout
+            android:id="@+id/my_info_ll_my_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/my_info_re_my_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/my_info_iv_my_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:src="@mipmap/my_info_my_wallet" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/my_info_iv_my_wallet"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/my_info_iv_my_wallet"
+                    android:paddingLeft="5dp"
+                    android:text="@string/my_wallet"
+                    android:textColor="#000000" />
+
+
+                <ImageView
+                    android:id="@+id/re_my_iv_money_management"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/re_my_iv_money_management"
+                    android:paddingRight="5dp"
+                    android:text="@string/funds_management"
+                    android:textColor="#999999" />
+
+
+            </RelativeLayout>
+            <!--分割线-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cut_off" />
+            <!--钱包信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_remaining_sum"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_info_tv_remaining_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remaining_sum_number"
+                        android:textColor="#FF0000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/remaining_sum"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_red_packet"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_info_tv_red_packet_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/red_packet_number"
+                        android:textColor="#FF0000" />
+
+                    <TextView
+                        android:id="@+id/my_info_red_packet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/red_packet"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_integral"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_info_tv_integral_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/integral_number"
+                        android:textColor="#FF0000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/integral"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_discount_coupon"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/my_info_tv_discount_coupon_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/discount_coupon_number"
+                        android:textColor="#FF0000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/discount_coupon"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--分割线-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/cut_off_big" />
+
+        <!--商店及个人信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <!--相关信息第一行-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_shop_collect"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_info_shop_collect" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/shop_collect"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cut_off_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_attention_shop"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_info_attention_shop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/attention_shop"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cut_off_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_my_share"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_info_my_share" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/my_share"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cut_off_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_help_center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_info_help_center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/help_centent"
+                        android:textColor="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--分割线-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cut_off" />
+
+            <!--相关信息第二行-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_recruitment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_info_recruitment" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/recruitment"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cut_off_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_browsing_history"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/my_info_browsing_history" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/browsing_history"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cut_off_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/my_info_ll_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/o2o_my_safe_picture" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="我的相册"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <!--分割线-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/cut_off_vertical" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="@string/remaining_sum"
+                        android:textColor="#000000"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cut_off_big" />
+
+</LinearLayout>

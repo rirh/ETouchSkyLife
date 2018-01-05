@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cut_off_big" />
+
+    <include layout="@layout/o2o_title_layout"/>
+
+    <!--分割线-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cut_off_big" />
+    <RadioGroup
+        android:id="@+id/o2o_my_form_rg_title_bar"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/o2o_my_form_rb_all_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="全部订单"
+            android:textColor="@drawable/o2o_my_form_color"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/cut_line"
+          />
+
+        <RadioButton
+            android:id="@+id/o2o_my_form_rb_wait_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="待付款"
+            android:textColor="@drawable/o2o_my_form_color"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/cut_line" />
+
+        <RadioButton
+            android:id="@+id/o2o_my_form_rb_wait_take"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="待收货"
+            android:textColor="@drawable/o2o_my_form_color"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/cut_line" />
+
+        <RadioButton
+            android:id="@+id/o2o_my_form_rb_wait_appraise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="待评价"
+            android:textColor="@drawable/o2o_my_form_color"
+            android:textSize="15dp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/o2o_my_form_fl_from_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/o2o_my_form_tv_hint"
+            android:drawableTop="@mipmap/o2o_my_form_no_cry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="亲,还没有订单哦~!" />
+    </FrameLayout>
+
+</LinearLayout>

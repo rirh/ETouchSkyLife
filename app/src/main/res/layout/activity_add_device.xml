@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff0f0f3"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:background="@mipmap/title_back">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/button_ebtn">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@mipmap/vp_back_white_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:paddingRight="5dp"
+                android:text="@string/back"
+                android:textColor="#ffffffff"
+                android:textSize="15.0dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_ebtn"
+            android:gravity="center"
+            android:minWidth="70dp"
+            android:text="@string/done"
+            android:textColor="#ffffffff"
+            android:textSize="15.0dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/addDevice"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff0f0f3"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <EditText
+            android:id="@+id/et_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/backgroud_write_drawable"
+            android:hint="@string/deviceName"
+            android:paddingLeft="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backgroud_write_drawable"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_device_serial"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="#00000000"
+                android:hint="@string/deviceSer"
+                android:paddingLeft="5dp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:cacheColorHint="#00000000"
+            android:choiceMode="singleChoice"
+            android:divider="#AAAAAA"
+            android:dividerHeight="1dp"
+            android:drawSelectorOnTop="false"
+            android:footerDividersEnabled="false"></ListView>
+    </LinearLayout>
+
+</LinearLayout>

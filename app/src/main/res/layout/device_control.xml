@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:id="@+id/deviceInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true">
+
+            <TextView
+                style="@style/GridLayoutTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备地址：" />
+
+            <TextView
+                android:id="@+id/device_address"
+                style="@style/GridLayoutDataTextView" />
+
+            <TextView
+                style="@style/GridLayoutTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="状态：" />
+
+            <TextView
+                android:id="@+id/connection_state"
+                style="@style/GridLayoutDataTextView" />
+
+        </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/unlock_ble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_bg"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝牙开门" />
+    </LinearLayout>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="摇一摇开门口"
+        />
+</RelativeLayout>

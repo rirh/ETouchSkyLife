@@ -1,0 +1,129 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="AppThemes" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#FF4081</item>
+    </style>
+    <style name="FullBleedTheme" parent="android:Theme.Light.NoTitleBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="ActionBarTheme" parent="android:Theme.Light">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="Tab_A_Top_Style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Tab_A_Bottom_Style">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="login_input_view">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">51.0dip</item>
+    </style>
+    <style name="text_size_12">
+        <item name="android:textSize">12.0dip</item>
+    </style>
+    <style name="text_size_13">
+        <item name="android:textSize">13.0dip</item>
+    </style>
+    <style name="text_size_14">
+        <item name="android:textSize">14.0dip</item>
+    </style>
+    <style name="text_size_15">
+        <item name="android:textSize">15.0dip</item>
+    </style>
+    <style name="text_size_16">
+        <item name="android:textSize">16.0dip</item>
+    </style>
+    <style name="text_size_17">
+        <item name="android:textSize">17.0dip</item>
+    </style>
+    <style name="text_size_18">
+        <item name="android:textSize">18.0dip</item>
+    </style>
+    <style name="text_size_20">
+        <item name="android:textSize">20.0dip</item>
+    </style>
+    <style name="input_common">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+    <style name="k_input_common">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionDone</item>
+    </style>
+    <style name="new_login_input_view">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+    <style name="NobackDialog" parent="@android:style/Theme.Dialog">
+
+        <item name="android:windowBackground">@color/no_back</item>
+
+    </style>
+    <style name="GridLayoutDataTextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:maxLines">100</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="GridLayoutTitleTextView">
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

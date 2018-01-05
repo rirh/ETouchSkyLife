@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/cut_off_big" />
+
+    <include layout="@layout/o2o_title_layout" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/a_fragment_advice_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/a_fragment_advice_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@mipmap/a_fragmet_no_advice"
+                    android:gravity="center"
+                    android:paddingTop="50dp"
+                    android:text="您还未提任何信息"
+                    android:textColor="#FFFFFF" />
+
+
+                <Button
+                    android:id="@+id/a_fragment_insert_advice_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="#6CCBCB"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="提一条"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/a_fragment_again_insert_advice_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="#6CCBCB"
+            android:gravity="center"
+            android:text="再提一条"
+            android:textColor="#FFFFFF"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

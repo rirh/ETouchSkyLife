@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        applicationId "com.etouchsky.wisdom"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode=2
+        versionName="1.1.0"
+    }
+
+    //编译配置，第三方集成我们的SDK，只需要拷贝AndroidMainfest中的部分配置，所有改动在这里修改即可
+    defaultConfig {
+        manifestPlaceholders = [BUILD_TIME_VALUE       : new Date().format('yyyyMMdd'),
+                                DONG_APPID_VALUE       : 'ucilZA4JfMtNvqPi72tReOIDErz3wZu+7bt7xJ7RUb2+QLZdJ0M+hg==',//咚咚AppID(咚咚公司生成)
+                                GT_PUSH_APPID_VALUE    : 'I0Ze3dG6st64tDCxbqfB49',//个推AppID
+                                GT_PUSH_APPSECRET_VALUE: 'cVNaqrrAvsANqTvrGdfuB8',//个推App Secret
+                                GT_PUSH_APPKEY_VALUE   : 'Arx5B8p2Do8NtiHbw9FMZ1',//个推App Key
+                                APP_PACKAGE_NAME_VALUE : 'com.etouchsky.wisdom',//自己应用的包名
+                                BAIDU_API_KEY_VALUE    : 'AGL6kRRyGQCQza8mHeZCxjvx',//百度api key
+                                HUAWEI_APPID_VALUE     : '100060671',//华为AppId
+                                XIAOMI_APPID_VALUE     : '2882303761517604504',//小米AppId
+                                XIAOMI_APPKEY_VALUE    : '5951760482504',//小米AppKey
+                                JIGUANG_APPKEY_VALUE   : '54032600ae1b43f2d4c935a6',//极光AppKey
+                                MEIZU_APPID_VALUE      : '110226',//魅族AppID
+                                MEIZU_APPKEY_VALUE     : 'a4085450d5ae4e43bdf3b68c5a07130d']//魅族AppKey
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    useLibrary  'org.apache.http.legacy'
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/DongDongSDK-1.1.1.0.jar')
+    compile files('libs/GetuiSDK2.9.5.0.jar')
+    compile files('libs/pushservice-5.1.0.48.jar')
+    compile files('libs/jpush-android_v3.0.1.jar')
+    compile files('libs/jcore-android_v1.1.0.jar')
+    compile 'com.meizu.flyme.internet:push-internal-publish:3.3.170110'
+    compile(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
+    compile(name: 'baseble-release', ext: 'aar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile 'com.vise.xiaoyaoyou:viselog:1.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile project(path: ':caldroidlibrary')
+    compile files('libs/MiPush_SDK_Client_3_4_5.jar')
+    compile files('libs/gson-2.8.0.jar')
+    implementation files('libs/DongDongSDK-1.1.1.0.jar')
+    implementation files('libs/GetuiSDK2.9.5.0.jar')
+    implementation files('libs/gson-2.8.0.jar')
+    implementation files('libs/jcore-android_v1.1.0.jar')
+    implementation files('libs/jpush-android_v3.0.1.jar')
+    implementation files('libs/MiPush_SDK_Client_3_4_5.jar')
+    implementation files('libs/pushservice-5.1.0.48.jar')
+    implementation files('libs/universal-image-loader-1.9.5.jar')
+    implementation files('libs/xUtils-2.6.14.jar')
+}
+
+repositories {
+    flatDir { dirs 'aars' }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FullBleedTheme" parent="android:Theme.Holo.Light.NoActionBar.TranslucentDecor">
+        <!-- API 19 theme customizations can go here. -->
+    </style>  
+    <style name="cloud_button_style">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingTop">15.0dip</item>
+        <item name="android:paddingBottom">18.0dip</item>
+        <item name="android:layout_marginLeft">20.0dip</item>
+        <item name="android:layout_marginRight">20.0dip</item>
+    </style>
+    <style name="button_style" parent="@android:style/Widget.Holo.Button">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="suggest_style" parent="@android:style/Widget.Material.Light.ListView.DropDown">
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:divider">@color/diver_color</item>
+        <item name="android:dividerHeight">1.0dip</item>
+    </style>
+    
+</resources>

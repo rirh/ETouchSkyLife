@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    
+   >
+
+    <ImageView
+        android:id="@+id/m_logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip" >
+    </ImageView>
+
+    <TextView
+        android:id="@+id/m_pname"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="5dip"
+        android:layout_below="@+id/m_logo"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+         >
+    </TextView>
+
+   
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/shopping_cart_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="8dp"
+        android:src="@mipmap/shopping_cart_icon" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:paddingTop="28dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="生鲜"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="#F5F5F5" >
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="15dp"
+                android:background="#F6F6F6" >
+
+                <RadioGroup
+                    android:id="@+id/radioCamType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                </RadioGroup>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/commodityList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#F5F5F5" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

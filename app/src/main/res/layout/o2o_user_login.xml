@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@mipmap/o2o_login_bac"
+        android:orientation="vertical">
+        <!--头部-->
+        <RelativeLayout
+            android:id="@+id/o2o_user_login_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/left_white" />
+
+            <TextView
+                android:id="@+id/private_message_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="5dp"
+                android:text="@string/O2O_Login_Top"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:src="@mipmap/o2o_login_log" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/o2o_et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableStart="@mipmap/o2o_login_username"
+            android:hint="      手机号码/用户名"
+            android:textColor="#999999"
+            android:textColorHint="#999999" />
+        <EditText
+            android:id="@+id/o2o_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:drawableStart="@mipmap/o2o_login_password"
+            android:hint="      密码"
+            android:inputType="textPassword"
+            android:paddingTop="20dp"
+            android:textColor="#999999"
+            android:textColorHint="#999999" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="end"
+            android:paddingTop="10dp"
+            android:text="@string/O2O_Login_Lost_Password"
+            android:textColor="#999999"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/o2o_bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_login_begin_login"
+            android:text="@string/acc_login_btn"
+            android:textColor="@color/text_white"
+            android:textSize="16dip" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="找回密码"
+            android:textColor="#63AEFF" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/o2o_bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/O2O_Login_Register"
+            android:textColor="#63AEFF" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

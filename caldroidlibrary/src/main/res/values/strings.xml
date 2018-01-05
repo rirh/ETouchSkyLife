@@ -1,0 +1,5 @@
+<resources>
+    <string name="day_name_format">EEE</string>
+    <string name="invalid_date">日期应该在 %1$s 到 %2$s.</string>
+    <string name="month_name_format">MMMM yyyy</string>
+</resources>
