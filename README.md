@@ -1,5 +1,3 @@
 # ETouchSkyLife
-android studio 3.0 以上项目
+android studio 3.0 
 
-
-JAVA代码的Android的原生项目
